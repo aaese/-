@@ -1,0 +1,30 @@
+#include<iostream>
+#include<cmath>
+#include<vector>
+using namespace std;
+int main() {
+	vector <int> bits;
+	int n, b;
+	cout << "Input number: ";
+	cin >> n;
+	cout << "Input number of bit you want to change with 0: ";
+	cin >> b;
+	while (n != 1) {
+		int ost = n % 2;
+		bits.push_back(ost);
+		n = n / 2;
+	}
+	bits.push_back(n);
+	int siz = bits.size();
+	cout << "original number: ";
+	for (int i = (siz - 1); i >= 0; i--) {
+		cout << bits[i];
+	}
+	cout << endl;
+	bits[siz - b] = 0;
+	cout << "changed bit: ";
+	for (int i = (siz - 1); i >= 0; i--) {
+		cout << bits[i];
+	}
+	return 0;
+}
