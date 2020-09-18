@@ -1,0 +1,19 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main() {
+	cout << "Input coordinates of the point: ";
+	int x, y, R, r;
+	cin >> x >> y;
+	cout << "Input radius of the outer circle: ";
+	cin >> R;
+	cout << "Input radius of the inner circle: ";
+	cin >> r;
+	if (((x * x + y * y) < R * R) && ((x * x + y * y) > r * r)) {
+		cout << "the point is located inside the circle";
+	}
+	else {
+		cout << "the point is located outside the circle";
+	}
+	return 0;
+}
