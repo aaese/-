@@ -1,0 +1,32 @@
+#include<iostream>
+#include<cmath>
+#include<vector>
+using namespace std;
+int main() {
+	vector <int> bits;
+	int n;
+	bool flag = 0;
+	cout << "Input number: ";
+	cin >> n;
+	while (n != 1) {
+		int ost = n % 2;
+		if (ost == 1) {
+			flag = 1;
+		}
+		bits.push_back(ost);
+		n = n / 2;
+	}
+	bits.push_back(n);
+	int siz = bits.size();
+	cout << "number in binary system: ";
+	for (int i = (siz - 1); i >= 0; i--) {
+		cout << bits[i];
+	}
+	if (flag) {
+		cout << endl << "not the power of two";
+	}
+	else {
+		cout << endl << "the power of two";
+	}
+	return 0;
+}
