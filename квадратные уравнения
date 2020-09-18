@@ -1,0 +1,23 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main() {
+	int a, b, c;
+	cout << "Inter coefficients:";
+	cin >> a >> b >> c;
+	int d = (b * b - 4 * a * c);
+	double D = sqrt(d);
+	if (d < 0) {
+		cout<<endl<<"no real roots";
+	}
+	else if (d == 0) {
+		double x1 = ((-b + D) / (2 * a));
+		cout << endl << "root: " << x1;
+	}
+	else if (d > 0) {
+		double x1 = ((-b + D) / (2 * a));
+		double x2 = ((-b - D) / (2 * a));
+		cout << endl << "roots: " << x1 << " " << x2;
+	}
+	return 0;
+}
