@@ -6,9 +6,15 @@ int main() {
 	cout << "Inter coefficients:";
 	cin >> a >> b >> c;
 	int d = (b * b - 4 * a * c);
+	cout << d;
 	double D = sqrt(d);
+	if (a == 0) {
+		cout << " the equation is not square";
+		system("pause");
+		return 0;
+	}
 	if (d < 0) {
-		cout<<endl<<"no real roots";
+		cout << endl << "no real roots";
 	}
 	else if (d == 0) {
 		double x1 = ((-b + D) / (2 * a));
@@ -19,5 +25,6 @@ int main() {
 		double x2 = ((-b - D) / (2 * a));
 		cout << endl << "roots: " << x1 << " " << x2;
 	}
+	system("pause");
 	return 0;
 }
